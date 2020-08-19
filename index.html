@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>API Project #2</title>
     <link
       rel="stylesheet"
@@ -10,19 +10,64 @@
       integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="airVisual_API.css">
-</head>
-<body>
-    <label for="state">Choose a state:</label>
-    <select id="state" name="state">
-        <option value="">Please select</option>
-    </select>
-    <label for="city">Choose a city:</label>
-    <select id="city" name="city">
-        <option value="">Please select</option>
-    </select>
+    <link rel="stylesheet" href="airVisual_API.css" />
+  </head>
+  <body>
+    <!-- Jumbotron  -->
+    <section id="landing-section">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">Real-time Weather and Air Quality*</h1>
+          <p class="lead">
+            See the current stats for your city!
+          </p>
+          <p id="disclaimer" class="align-bottom">*Kind of, but not really real-time</p>
+        </div>
+      </div>
+    </section>
 
-    
+    <!--Bootsrap layout-->
+    <section>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-4">
+            <label for="state">Choose a state:</label>
+            <select class="custom-select" id="state" name="state">
+              <option value="">Pick State</option>
+            </select>
+          </div>
+          <div id="city-selector" class="col-md-4">
+            <label for="city">Choose a city:</label>
+            <select class="custom-select" id="city" name="city">
+              <option value="">Pick City</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Data Table layout-->
+    <table class="table table-bordered">
+        <thead class="thead-dark">
+          <tr id="time">
+            <th scope="col">Time Updated (EST)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr id="temp">
+            <th scope="row">Temperature (F)</th>
+          </tr>
+          <tr id="humidity">
+            <th scope="row">Humidity</th>
+          </tr>
+          <tr id="wind-speed">
+            <th scope="row">Wind Speed</th>
+          </tr>
+          <tr id="air-quality">
+            <th scope="row">Air Quality Index (<a href="https://www.airnow.gov/aqi/aqi-basics/">US AQI</a>)</th>
+          </tr>
+        </tbody>
+      </table>
+
     <script src="airVisual_API.js"></script>
-</body>
+  </body>
 </html>

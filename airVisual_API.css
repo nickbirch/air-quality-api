@@ -1,0 +1,33 @@
+.jumbotron {
+  background: url("assets/industry-611668_960_720.jpg") no-repeat center;
+  background-size: cover;
+  color: rgb(245, 245, 245);
+  text-align: center;
+}
+
+body {
+  background-color: cornflowerblue;
+}
+
+label {
+  font-weight: bold;
+}
+
+.col-md-4 {
+  padding: 1em;
+}
+
+.lead {
+  font-size: 1.5rem;
+}
+
+#disclaimer {
+  position: absolute;
+  right: 1rem;
+}
+
+.table {
+  max-width: 500px;
+  text-align: center;
+  margin: 2rem auto;
+}
